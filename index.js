@@ -4,6 +4,7 @@ import Vue from "vue";
 import App from "./App";
 import router from "./router";
 import "tailwindcss/dist/tailwind.css";
+
 import VueCompositionApi from "@vue/composition-api";
 
 Vue.use(VueCompositionApi);
