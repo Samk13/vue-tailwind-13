@@ -1,8 +1,8 @@
 <template>
-  <div class="flex flex-col p-3 my-6 bg-pink rounded-lg">
-    <h1 class="p-4 text-4xl">select one:</h1>
-    <SelectOneInline v-model="selected" :options="options"/>
-    <div class="mt-3 font-mono bg-teal-500 rounded-lg p-4">
+  <div class="container rounded-lg bg-teal-900 rounded-lg shadow-xl">
+    <h1 class="text-4xl">select one:</h1>
+    <SelectOneInline class="m-auto w-1/2" v-model="selected" :options="options"/>
+    <div class="my-3 mx-auto md:w-1/2 text-center font-mono bg-teal-500 rounded-lg p-3">
       selected: {
       <span
         v-if="selected !== null "

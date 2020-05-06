@@ -2,11 +2,9 @@
   <div class="min-w-screen min-h-screen bg-gray-900 text-white font-sans">
     <my-header></my-header>
 
-    <div class="container m-auto bg-teal-800 rounded-lg shadow-xl">
-      <option-list/>
+    <option-list class="m-auto mt-5"/>
 
-      <my-content/>
-    </div>
+    <my-content class="m-auto"/>
 
     <my-footer></my-footer>
   </div>
