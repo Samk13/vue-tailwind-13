@@ -1,7 +1,7 @@
 <template>
-  <div class="header-wrapper p-4 md:py-4 bg-white border-b border-grey-light">
-    <div class="header container max-w-md mx-auto flex items-center">
-      <div class="logo font-bold text-2xl text-blue-dark">Sam Arbid</div>
+  <div class="p-4 md:py-4 bg-gray-900 border-b-2 bordder-b border-dashed">
+    <div class="container max-w-md mx-auto flex items-center">
+      <div class="font-bold text-2xl text-white">Sam Arbid</div>
       <!--     <div class="search flex-1 ml-8 mr-8">
         <input
           class="w-full text-grey-dark font-light py-2 bg-grey-lighter px-4 border border-grey-light rounded"

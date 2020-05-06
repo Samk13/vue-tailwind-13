@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-row">
     <div
-      class="bg-teal rounded-lg shadow m-2"
+      class="bg-teal-500 rounded-lg shadow m-2"
       @click="$emit('input', item.value)"
       v-for="item in options"
       :key="item.value"
