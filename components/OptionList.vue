@@ -1,13 +1,13 @@
 <template>
   <div class="container rounded-lg bg-teal-900 rounded-lg shadow-xl">
     <h1 class="text-4xl">select one:</h1>
-    <SelectOneInline class="m-auto w-1/2" v-model="selected" :options="options"/>
+    <SelectOneInline class="m-auto w-1/2" v-model="store.selected" :options="store.options"/>
     <div class="my-3 mx-auto md:w-1/2 text-center font-mono bg-teal-500 rounded-lg p-3">
       selected: {
       <span
-        v-if="selected !== null "
+        v-if="store.selected !== null "
         class="text-yellow-500 bg-gray-900 rounded-lg px-2 py-1"
-      >{{ selected }}</span>
+      >{{ store.selected }}</span>
       <span v-else class="text-yellow-500 bg-gray-900 rounded-lg px-2 py-1">select one option 👆🏼</span>
       }
     </div>
@@ -15,20 +15,25 @@
 </template>
 <script>
 import SelectOneInline from "./SelectOneInline.vue";
-import { defineComponent } from "@vue/composition-api";
+import { defineComponent, reactive } from "@vue/composition-api";
 
 export default defineComponent({
   components: {
     SelectOneInline
   },
-  data() {
-    return {
+
+  setup() {
+    const store = reactive({
       selected: null,
       options: [
         { value: "first-option", label: "Yes 👍🏼" },
         { value: "second-option", label: "No 👎🏼" },
         { value: "third-option", label: "Maybe 🤙🏼" }
       ]
+    });
+
+    return {
+      store
     };
   }
 });
