@@ -1,7 +1,6 @@
 <template>
   <div class="container">
-    <h1>Qestion box</h1>
-    <template slot="question">{{ currentQuestion.category }}</template>
+    <h1>{{ theQuestion.question }}</h1>
     <hr class="my-4">
     <p>List of answers</p>
     <div class="space-x-4">
@@ -13,7 +12,7 @@
 <script>
 export default {
   props: {
-    currentQuestion: Object
+    theQuestion: Object
   }
 }
 </script>
