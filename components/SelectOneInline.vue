@@ -11,15 +11,13 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "@vue/composition-api";
-
-export default defineComponent({
+<script>
+export default {
   props: {
     options: {
       required: true,
       type: Array
     }
   }
-});
+};
 </script>

@@ -1,7 +1,7 @@
 {
-  "name": "vue-tailwindcss-layout",
+  "name": "vue-tailwindcss-sam",
   "version": "1.0.0",
-  "description": "vue and tailwind example layout",
+  "description": "",
   "keywords": [],
   "main": "index.js",
   "dependencies": {
