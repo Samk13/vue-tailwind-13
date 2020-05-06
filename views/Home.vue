@@ -1,10 +1,10 @@
 <template>
-  <div class="App min-w-screen min-h-screen flex flex-col bg-grey-lightest font-sans">
+  <div class="min-w-screen min-h-screen bg-gray-900 text-white font-sans">
     <my-header></my-header>
 
-    <option-list></option-list>
+    <option-list class="m-auto mt-5"/>
 
-    <my-content></my-content>
+    <my-content class="m-auto"/>
 
     <my-footer></my-footer>
   </div>

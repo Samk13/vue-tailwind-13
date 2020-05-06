@@ -1,7 +1,16 @@
 <template>
-  <div class="flex flex-col p-3 my-6 bg-pink rounded-lg">
-    <SelectOneInline v-model="selected" :options="options"/>
-    <div class="mt-4 font-mono bg-teal rounded-lg p-4">selected: { {{ selected }} }</div>
+  <div class="container rounded-lg bg-teal-900 rounded-lg shadow-xl">
+    <h1 class="text-4xl">select one:</h1>
+    <SelectOneInline class="m-auto w-1/2" v-model="selected" :options="options"/>
+    <div class="my-3 mx-auto md:w-1/2 text-center font-mono bg-teal-500 rounded-lg p-3">
+      selected: {
+      <span
+        v-if="selected !== null "
+        class="text-yellow-500 bg-gray-900 rounded-lg px-2 py-1"
+      >{{ selected }}</span>
+      <span v-else class="text-yellow-500 bg-gray-900 rounded-lg px-2 py-1">select one option 👆🏼</span>
+      }
+    </div>
   </div>
 </template>
 <script>
@@ -18,11 +27,7 @@ export default defineComponent({
       options: [
         { value: "first-option", label: "Yes 👍🏼" },
         { value: "second-option", label: "No 👎🏼" },
-        { value: "third-option", label: "Maybe 🤙🏼" },
-        {
-          value: "forth-option",
-          label: "A long answer to see how long looks 💁🏼‍♀️"
-        }
+        { value: "third-option", label: "Maybe 🤙🏼" }
       ]
     };
   }
