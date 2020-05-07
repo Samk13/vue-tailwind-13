@@ -2,7 +2,7 @@
   <div class="py-4 text-center m-auto md:mx-auto px-5 text-sm tracking-wide">
     <HeaderFcc/>
     <span>yoo !</span>
-    <question-box v-if="store.quest.length" :theQuestion="store.quest[index]"></question-box>
+    <question-box v-if="store.quest.length" :theQuestion="store.quest[index]" :next="next"/>
   </div>
 </template>
 
@@ -21,7 +21,6 @@ export default {
     const store = reactive({
       quest: []
     })
-
     onMounted(() => {
       fetch("https://opentdb.com/api.php?amount=10&category=9&type=multiple", {
         method: "GET"
@@ -33,10 +32,14 @@ export default {
           store.quest = data.results
         })
     })
+    function next() {
+      return index.value++
+    }
 
     return {
       store,
-      index
+      index,
+      next
     }
   }
 }
