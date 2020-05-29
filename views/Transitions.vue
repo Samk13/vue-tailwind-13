@@ -1,15 +1,55 @@
 <template>
   <div class="min-w-screen min-h-screen space-y-4 bg-gray-900 text-white font-sans">
     <my-header/>
-    <div class="bg-gray-400 h-screen text-center p-4 rounded-lg mx-5">
-      <button class="bg-green-400 p-5 rounded-lg hover:shadow-lg uppercase" @click="open = !open">
-        open transition
-        <span class="mx-3 text-black">{{ open }}</span>
-      </button>
+    <div class="flex">
+      <div class="bg-teal-900 h-screen w-12/4 text-center p-4 rounded-lg mx-5">
+        <button
+          class="bg-white text-xs text-blue-900 p-2 rounded-full border-2 border-green-500 shadow hover:shadow-lg uppercase"
+          @click="openFade = !openFade"
+        >
+          open transition
+          <span class="mx-3 text-black">{{ openFade }}</span>
+        </button>
 
-      <fade-transition>
-        <div class="w-6/12 m-auto rounded-lg m-6 mt-4 h-full bg-orange-500" v-if="open">klsjdf</div>
-      </fade-transition>
+        <fade-transition>
+          <tailwind-bg
+            class="w-6/12 m-auto shadow-lg rounded-lg m-6 mt-4 h-64 bg-teal-500"
+            v-if="openFade"
+          />
+        </fade-transition>
+      </div>
+      <div class="bg-teal-900 h-screen w-12/4 text-center p-4 rounded-lg mx-5">
+        <button
+          class="bg-white text-xs text-blue-900 p-2 rounded-full border-2 border-green-500 shadow hover:shadow-lg uppercase"
+          @click="openCollapse = !openCollapse"
+        >
+          open transition
+          <span class="mx-3 text-black">{{ openCollapse }}</span>
+        </button>
+
+        <collapse-transition>
+          <tailwind-bg
+            class="w-6/12 m-auto shadow-lg rounded-lg m-6 mt-4 h-64 bg-teal-500"
+            v-if="openCollapse"
+          />
+        </collapse-transition>
+      </div>
+      <div class="bg-teal-900 w-12/4 h-screen text-center p-4 rounded-lg mx-5">
+        <button
+          class="bg-white text-xs text-blue-900 p-2 rounded-full border-2 border-green-500 shadow hover:shadow-lg uppercase"
+          @click="openScale = !openScale"
+        >
+          open transition
+          <span class="mx-3 text-black">{{ openScale }}</span>
+        </button>
+
+        <scale-transition>
+          <tailwind-bg
+            class="w-6/12 m-auto shadow-lg rounded-lg m-6 mt-4 h-64 bg-teal-500"
+            v-if="openScale"
+          />
+        </scale-transition>
+      </div>
     </div>
     <my-footer/>
   </div>
@@ -20,7 +60,7 @@ import { ref } from "@vue/composition-api"
 import Header from "../components/Header.vue"
 import Content from "../components/Content.vue"
 import Footer from "../components/Footer.vue"
-
+import TailwindBg from "../components/TailwindBg.vue"
 import {
   FadeTransition,
   CollapseTransition,
@@ -34,13 +74,18 @@ export default {
     "my-footer": Footer,
     "fade-transition": FadeTransition,
     "collapse-transition": CollapseTransition,
-    "scale-transition": ScaleTransition
+    "scale-transition": ScaleTransition,
+    "tailwind-bg": TailwindBg
   },
   setup() {
-    const open = ref(true)
+    const openFade = ref(true)
+    const openCollapse = ref(true)
+    const openScale = ref(true)
 
     return {
-      open
+      openFade,
+      openCollapse,
+      openScale
     }
   }
 }
