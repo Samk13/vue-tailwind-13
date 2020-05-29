@@ -10,7 +10,6 @@
           open transition
           <span class="mx-3 text-black">{{ openFade }}</span>
         </button>
-
         <fade-transition>
           <tailwind-bg
             class="w-6/12 m-auto shadow-lg rounded-lg m-6 mt-4 h-64 bg-teal-500"
