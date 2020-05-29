@@ -10,6 +10,9 @@
       <fade-transition>
         <div class="w-6/12 m-auto rounded-lg m-6 mt-4 h-full bg-orange-500" v-if="open">klsjdf</div>
       </fade-transition>
+      <fade-transition>
+        <div class="w-6/12 m-auto rounded-lg m-6 mt-4 h-full bg-orange-500" v-if="open">klsjdf</div>
+      </fade-transition>
     </div>
     <my-footer/>
   </div>
