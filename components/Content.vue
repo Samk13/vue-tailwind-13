@@ -1,5 +1,5 @@
 <template>
-  <div class="container bg-blue-500">
+  <div class="container mx-auto bg-blue-500 py-5  rounded-lg">
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
       <card
         title="The Who"
