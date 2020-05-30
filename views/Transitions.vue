@@ -1,15 +1,11 @@
 <template>
   <div class="space-y-4 bg-gray-900 text-white font-sans">
-    <my-header/>
     <div class="flex">
       <div class="bg-teal-900 w-1/3 text-center p-4 rounded-lg mx-5">
         <button
           class="bg-white text-xs text-blue-900 p-2 rounded-full border-2 border-green-500 shadow hover:shadow-lg uppercase"
           @click="openFade = !openFade"
-        >
-          open transition
-          <span class="mx-3 text-black">{{ openFade }}</span>
-        </button>
+        >fade transition</button>
 
         <fade-transition>
           <tailwind-bg
@@ -22,10 +18,7 @@
         <button
           class="bg-white text-xs text-blue-900 p-2 rounded-full border-2 border-green-500 shadow hover:shadow-lg uppercase"
           @click="openCollapse = !openCollapse"
-        >
-          open transition
-          <span class="mx-3 text-black">{{ openCollapse }}</span>
-        </button>
+        >Collapse transition</button>
         <collapse-transition>
           <tailwind-bg
             class="w-6/12 m-auto shadow-lg rounded-lg m-6 mt-4 h-64 bg-teal-500"
@@ -37,11 +30,7 @@
         <button
           class="bg-white text-xs text-blue-900 p-2 rounded-full border-2 border-green-500 shadow hover:shadow-lg uppercase"
           @click="openScale = !openScale"
-        >
-          open transition
-          <span class="mx-3 text-black">{{ openScale }}</span>
-        </button>
-
+        >Scale transition</button>
         <scale-transition>
           <tailwind-bg
             class="w-6/12 m-auto shadow-lg rounded-lg m-6 mt-4 h-64 bg-teal-500"
@@ -50,7 +39,6 @@
         </scale-transition>
       </div>
     </div>
-    <my-footer/>
   </div>
 </template>
 
