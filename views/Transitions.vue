@@ -13,7 +13,7 @@
 
         <fade-transition>
           <tailwind-bg
-            class="w-6/12 m-auto shadow-lg rounded-lg m-6 mt-4 h-64 bg-teal-500"
+            class="w-1/3 m-auto shadow-lg rounded-lg m-6 mt-4 h-64 bg-teal-500"
             v-if="openFade"
           />
         </fade-transition>
