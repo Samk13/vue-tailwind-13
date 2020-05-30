@@ -2,7 +2,6 @@
   <div class="space-y-4 bg-gray-900 text-white font-sans">
     <my-header/>
     <div class="flex">
-
       <div class="bg-teal-900 w-1/3 text-center p-4 rounded-lg mx-5">
         <button
           class="bg-white text-xs text-blue-900 p-2 rounded-full border-2 border-green-500 shadow hover:shadow-lg uppercase"
@@ -19,7 +18,7 @@
           />
         </fade-transition>
       </div>
-      <div class="bg-teal-900 h-screen w-12/4 text-center p-4 rounded-lg mx-5">
+      <div class="bg-teal-900 h-screen w-1/3 text-center p-4 rounded-lg mx-5">
         <button
           class="bg-white text-xs text-blue-900 p-2 rounded-full border-2 border-green-500 shadow hover:shadow-lg uppercase"
           @click="openCollapse = !openCollapse"
@@ -35,7 +34,6 @@
         </collapse-transition>
       </div>
       <div class="bg-teal-900 w-1/3 h-screen text-center p-4 rounded-lg mx-5">
-
         <button
           class="bg-white text-xs text-blue-900 p-2 rounded-full border-2 border-green-500 shadow hover:shadow-lg uppercase"
           @click="openScale = !openScale"
