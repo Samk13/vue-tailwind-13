@@ -14,6 +14,7 @@
       </div>-->
       <div class="ml-auto space-x-4">
         <router-link to="/transitions" class="no-underline hover:text-blue-500">Transitions</router-link>
+        <router-link to="/ripple" class="no-underline hover:text-blue-500">Ripple</router-link>
         <a
           href="https://www.linkedin.com/in/samarbid/"
           target="_blank"
