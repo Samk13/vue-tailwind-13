@@ -38,6 +38,20 @@
           />
         </scale-transition>
       </div>
+      <div class="bg-teal-900 w-1/3 h-screen text-center p-4 rounded-lg mx-5">
+        <button
+          class="bg-white text-xs text-blue-900 p-2 rounded-full border-2 border-green-500 shadow hover:shadow-lg uppercase"
+          @click="opengroup = !opengroup"
+        >group transition</button>
+        <ListTransitionCss v-for="i in 7" class="list-transition" :key="i">
+          <li
+            v-if="opengroup"
+            :key="i"
+            class="m-auto p-5 border bg-gray-900 w-40 mt-1 shadow rounded-lg text-center text-white"
+            :style="{'--i': i}"
+          >test {{ i }}</li>
+        </ListTransitionCss>
+      </div>
     </div>
   </div>
 </template>
@@ -51,7 +65,8 @@ import TailwindBg from "../components/TailwindBg.vue"
 import {
   FadeTransition,
   CollapseTransition,
-  ScaleTransition
+  ScaleTransition,
+  ListTransitionCss
 } from "../components/Transitions"
 
 export default {
@@ -62,17 +77,20 @@ export default {
     "fade-transition": FadeTransition,
     "collapse-transition": CollapseTransition,
     "scale-transition": ScaleTransition,
-    "tailwind-bg": TailwindBg
+    "tailwind-bg": TailwindBg,
+    ListTransitionCss: ListTransitionCss
   },
   setup() {
     const openFade = ref(true)
     const openCollapse = ref(true)
     const openScale = ref(true)
+    const opengroup = ref(true)
 
     return {
       openFade,
       openCollapse,
-      openScale
+      openScale,
+      opengroup
     }
   }
 }
