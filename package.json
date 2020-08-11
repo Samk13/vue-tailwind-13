@@ -6,7 +6,7 @@
   "main": "index.js",
   "dependencies": {
     "@vue/composition-api": "0.5.0",
-    "tailwindcss": "1.4.4",
+    "tailwindcss": "1.6.2",
     "vue": "2.6.11",
     "vue-material-design-ripple": "1.0.0",
     "vue-router": "3.4.2"
