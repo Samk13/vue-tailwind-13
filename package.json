@@ -5,7 +5,7 @@
   "keywords": [],
   "main": "index.js",
   "dependencies": {
-    "@vue/composition-api": "1.4.3",
+    "@vue/composition-api": "1.4.4",
     "tailwindcss": "3.0.16",
     "vue": "2.6.14",
     "vue-material-design-ripple": "1.0.0",
