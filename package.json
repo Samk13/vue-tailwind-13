@@ -9,6 +9,6 @@
     "tailwindcss": "3.1.4",
     "vue": "3.2.37",
     "vue-material-design-ripple": "1.0.0",
-    "vue-router": "4.1.1"
+    "vue-router": "4.1.2"
   }
 }
