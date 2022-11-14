@@ -7,7 +7,7 @@
   "dependencies": {
     "@vue/composition-api": "1.7.1",
     "tailwindcss": "3.2.4",
-    "vue": "3.2.42",
+    "vue": "3.2.45",
     "vue-material-design-ripple": "1.0.0",
     "vue-router": "4.1.6"
   }
