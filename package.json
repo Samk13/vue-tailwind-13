@@ -5,10 +5,10 @@
   "keywords": [],
   "main": "index.js",
   "dependencies": {
-    "@vue/composition-api": "0.6.7",
-    "tailwindcss": "2.2.7",
-    "vue": "2.6.13",
+    "@vue/composition-api": "1.7.2",
+    "tailwindcss": "3.4.3",
+    "vue": "3.4.25",
     "vue-material-design-ripple": "1.0.0",
-    "vue-router": "3.5.2"
+    "vue-router": "4.3.2"
   }
 }
